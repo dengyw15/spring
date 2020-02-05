@@ -10,5 +10,8 @@
         <module name="spring_aop_xml" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springmvc" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,2 +1,0 @@
-userMapper=mapper.UserMapper
-userService=service.UserService
