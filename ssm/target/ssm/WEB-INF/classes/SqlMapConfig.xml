@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--当mybatis框架整合到spring框架后，该xml中的内容已经配置到spring的配置文件applicationContext.xml中
+故 该文件就不再需要了-->
+<configuration>
+    <!--配置环境-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="jdbc"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://116.62.102.175:3306/dyw"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--引入的映射配置文件-->
+    <mappers>
+        <!--注解方式(如果有多个Dao类，需要添加多个mapper配置，可以使用package配置扫描包)-->
+        <!--<mapper class="com.dyw.dao.AccountDao"></mapper>-->
+        <package name="com.dyw.dao"/>
+        <!--如果是xml方式，需要配置xml的地址-->
+        <!--<mapper resource="com.dyw.dao.xxx.xml"></mapper>-->
+    </mappers>
+</configuration>

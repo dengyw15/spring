@@ -1,6 +1,5 @@
 package com.dyw.exception;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
